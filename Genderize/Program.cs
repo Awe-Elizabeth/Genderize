@@ -45,9 +45,9 @@ app.MapGet("/api/classify", async (string name) =>
                 Name = response.Name,
                 Gender = response.Gender,
                 Probability = response.Probability,
-                Sample_Size = response.Count,
-                Is_Confident = response.Probability > 0.7,
-                Processed_At = DateTime.UtcNow
+                Sample_size = response.Count,
+                Is_confident = response.Probability > 0.7,
+                Processed_at = DateTime.UtcNow
             }
         };
         return Results.Ok(mappedResponse);
